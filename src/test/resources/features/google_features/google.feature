@@ -5,6 +5,7 @@ Feature: Google feature verifications
 
   @googleTest
   Scenario: Google title verification
+
     When User is on google homepage
     Then User should see title contains Google
     When User type wooden spoon on search box

@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cybertek14cucumberjunit" />
+        <module name="com.cybertek -JDBC" />
       </profile>
     </annotationProcessing>
   </component>
