@@ -10,12 +10,12 @@ import utilities.ExtentReport;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin = {"html:target/cucumber-reports",
-                    "json : target/jsonreport.json"},
+        plugin ={"html:target/cucumber-reports",
+                "json:target/smoke-cucumber.json"},
         features = "src/test/resources/features",
         glue = "step_definitions",
 
-        tags = "@positiveLoginSB1",
+//        tags = "@positiveLoginSB1",
         dryRun = true
 )
 public class CukesRunner {
