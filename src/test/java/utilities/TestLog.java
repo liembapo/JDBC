@@ -1,5 +1,10 @@
 package utilities;
 
+import com.aventstack.extentreports.ExtentReporter;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -7,13 +12,18 @@ public class TestLog {
     public static void main(String[] args) {
 
 
-        Logger logger = LogManager.getLogger(TestLog.class);
+        ExtentHtmlReporter configs = new ExtentHtmlReporter("./extentReport/report.html");
+        configs.config().setTheme(Theme.DARK);
 
-        System.out.println("Some test execution started"    );
-        System.out.println("goin to dzone.com");
-        logger.info("on dzone.com");
-        System.out.println("click in login button");
-        logger.warn("login in to application");
+        ExtentReports report = new ExtentReports();
+        report.attachReporter(configs);
+
+        System.out.println("start test");
+        ExtentTest extentTest = report.createTest("Google search");
+        extentTest.pass("passed");
+        extentTest.fail("failed");
+        report.flush();
+        System.out.println("completed" );
     }
 
 }

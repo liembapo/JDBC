@@ -9,7 +9,7 @@ Feature: Smartbear login feature verifications
   Password: tester
   2- User should see "Welcome, Tester!" displayed when logged in.
 
-  @positiveLoginSB
+  @positiveLoginSB1
   Scenario:
 
     Given user on smart bear homepage
