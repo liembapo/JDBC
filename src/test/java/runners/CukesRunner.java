@@ -16,7 +16,7 @@ import utilities.ExtentReport;
         glue = "step_definitions",
 
 //        tags = "@positiveLoginSB1",
-        dryRun = true
+        dryRun = false
 )
 public class CukesRunner {
 
